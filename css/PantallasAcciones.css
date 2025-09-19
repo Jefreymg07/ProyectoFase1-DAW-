@@ -4,37 +4,43 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem; /* Aumenta el tamaño general */
+  font-size: 2.5rem !important; /* tamaño base más grande */
 }
+
 .atm-card {
   background: #fff;
   border-radius: 15px;
   box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.35);
-  padding: 40px;
-  max-width: 900px; /* Más ancho */
+  padding: 60px; /* más padding */
+  max-width: 1200px; /* aún más ancho */
   width: 100%;
 }
+
 .saldo {
   color: green;
   font-weight: bold;
-  font-size: 1.6rem; /* Más grande */
+  font-size: 3rem !important; /* más grande */
 }
+
 .header-bank {
   text-align: center;
-  padding: 15px;
+  padding: 40px;
 }
+
 .header-bank h3 {
   font-weight: bold;
-  font-size: 2rem; /* Título más grande */
+  font-size: 3rem !important; /* título mucho más grande */
   margin: 0;
 }
+
 .btn-custom {
   width: 100%;
-  margin-bottom: 20px;
-  font-size: 1.2rem; /* Botones más grandes */
-  padding: 15px; /* Más altos */
+  margin-bottom: 40px;
+  font-size: 1.5rem !important; /* botones grandes */
+  padding: 20px !important; /* más altos */
 }
+
 .btn-danger {
-  font-size: 1.2rem;
-  padding: 12px 20px;
+  font-size: 1.5rem !important; /* lo igualamos al resto */
+  padding: 20px !important;
 }
