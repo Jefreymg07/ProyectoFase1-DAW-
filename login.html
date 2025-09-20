@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Bank ATM - Login</title>
+    <meta name = "description" content = "pagina Login para Pokémon Bank ATM">
+
+    <!-- Bootstrap 4.6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  
+    </div>
+     <!-- Contenido principal -->
+    <main class="login-container">
+        <!-- Contenedor principal del formulario de login -->
+    <div class="login-container">
+        <!-- Encabezado con logo y título -->
+        <div class="login-header">
+            <div class="pokeball-modern"></div>
+            <h1 class="login-title">Pokémon Bank ATM</h1>
+            <p class="login-subtitle">Ingresa tu PIN de 4 dígitos</p>
+        </div>
+        
+        <!-- Formulario de login -->
+        <form>
+            <!-- Campos para el PIN de 4 dígitos -->
+            <div class="pin-container">
+                <label class="pin-label">PIN de acceso</label>
+                <div class="pin-inputs">
+                    <input type="password" class="pin-digit" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
+                    <input type="password" class="pin-digit" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
+                    <input type="password" class="pin-digit" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
+                    <input type="password" class="pin-digit" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
+                </div>
+            </div>
+            
+            <!-- Teclado numérico visual (sin funcionalidad JavaScript) -->
+            <div class="numpad">
+                <button type="button" class="numpad-btn">1</button>
+                <button type="button" class="numpad-btn">2</button>
+                <button type="button" class="numpad-btn">3</button>
+                <button type="button" class="numpad-btn">4</button>
+                <button type="button" class="numpad-btn">5</button>
+                <button type="button" class="numpad-btn">6</button>
+                <button type="button" class="numpad-btn">7</button>
+                <button type="button" class="numpad-btn">8</button>
+                <button type="button" class="numpad-btn">9</button>
+                <button type="button" class="numpad-btn">0</button>
+                <button type="button" class="numpad-btn numpad-clear">Borrar</button>
+            </div>
+            
+            <!-- Botón de envío del formulario -->
+            <button type="submit" class="btn-login">Acceder</button>
+        </form>
+        
+        <!-- Pie de página con enlace de ayuda -->
+        <div class="login-footer">
+            <p>¿Problemas con tu PIN? <a href="#" class="help-link">Contactar soporte</a></p>
+        </div>
+    </div>
+     <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="footer-brand">
+                        <div class="pokeball-mini"></div>
+                        <span>Pokémon Bank ATM</span>
+                    </div>
+                    <p class="footer-text">Sistema de cajero automático digital seguro y confiable.</p>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Términos de Uso</a>
+                        <a href="#" class="footer-link">Política de Privacidad</a>
+                        <a href="#" class="footer-link">Soporte</a>
+                    </div>
+                    <p class="footer-copyright">© 2025 Pokémon Bank. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
