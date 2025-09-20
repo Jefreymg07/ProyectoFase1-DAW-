@@ -1,0 +1,156 @@
+ /* =========================================
+           1. CSS VARIABLES (DESIGN TOKENS)
+           ========================================= */
+        :root {
+          /* Variables CSS que definen la paleta de colores y estilos del proyecto */
+          --primary: #6366f1;
+          --primary-dark: #4338ca;
+          --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          /* ... (otras variables) */
+        }
+
+        /* =========================================
+           2. RESET & BASE STYLES
+           ========================================= */
+        *,
+        *::before,
+        *::after {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          background: var(--gradient-hero); /* Fondo con gradiente */
+          min-height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem; /* Usando variables de espacio */
+        }
+
+        /* =========================================
+           3. LOGIN STYLES
+           ========================================= */
+        .login-container {
+          /* Contenedor principal con efecto de vidrio (glassmorphism) */
+          background: rgba(255, 255, 255, 0.95);
+          backdrop-filter: blur(20px);
+          border-radius: 1.5rem; /* radius-2xl */
+          box-shadow: 0 32px 64px rgba(0, 0, 0, 0.12); /* shadow-pokemon */
+          padding: 2.5rem; /* space-10 */
+          width: 100%;
+          max-width: 450px;
+        }
+
+        .login-header {
+          text-align: center;
+          margin-bottom: 2rem; /* space-8 */
+        }
+
+        .pokeball-modern {
+          /* Estilo de pokeball decorativa */
+          width: 60px;
+          height: 60px;
+          background: linear-gradient(135deg, #ff6b6b, #feca57);
+          border-radius: 9999px; /* radius-full */
+          margin: 0 auto 1rem; /* space-4 */
+          position: relative;
+        }
+
+        .login-title {
+          /* Título con gradiente de color */
+          background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: 2rem;
+          font-weight: 700; /* font-weight-bold */
+        }
+
+        /* =========================================
+           4. PIN INPUT STYLES
+           ========================================= */
+        .pin-inputs {
+          /* Contenedor para los 4 dígitos del PIN */
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 1.5rem; /* space-6 */
+        }
+
+        .pin-digit {
+          /* Campos individuales para cada dígito del PIN */
+          width: 60px;
+          height: 70px;
+          text-align: center;
+          font-size: 2rem;
+          font-weight: 700; /* font-weight-bold */
+          border: 2px solid #cbd5e1; /* gray-300 */
+          border-radius: 0.75rem; /* radius-lg */
+          background: rgba(255, 255, 255, 0.9);
+        }
+
+        /* =========================================
+           5. NUMPAD STYLES
+           ========================================= */
+        .numpad {
+          /* Teclado numérico con grid layout */
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0.75rem; /* space-3 */
+          margin-bottom: 1.5rem; /* space-6 */
+        }
+
+        .numpad-btn {
+          /* Botones del teclado numérico */
+          padding: 1rem; /* space-4 */
+          background: rgba(255, 255, 255, 0.9);
+          border: 2px solid #e2e8f0; /* gray-200 */
+          border-radius: 0.75rem; /* radius-lg */
+          font-size: 1.5rem;
+          font-weight: 700; /* font-weight-bold */
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        /* =========================================
+           6. BUTTON & FOOTER STYLES
+           ========================================= */
+        .btn-login {
+          /* Botón de acceso con gradiente */
+          background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+          color: white;
+          width: 100%;
+          padding: 1rem; /* space-4 */
+          border: none;
+          border-radius: 0.75rem; /* radius-lg */
+          font-size: 1.1rem;
+          font-weight: 600; /* font-weight-semibold */
+        }
+
+        .login-footer {
+          /* Pie de página con enlace de ayuda */
+          text-align: center;
+          margin-top: 2rem; /* space-8 */
+          padding-top: 1.5rem; /* space-6 */
+          border-top: 1px solid #e2e8f0; /* gray-200 */
+          color: #64748b; /* gray-500 */
+        }
+
+        /* =========================================
+           7. RESPONSIVE DESIGN
+           ========================================= */
+        @media (max-width: 576px) {
+          /* Ajustes para dispositivos móviles */
+          .login-container {
+            padding: 1.5rem; /* space-6 */
+          }
+
+          .pin-digit {
+            width: 50px;
+            height: 60px;
+            font-size: 1.75rem;
+          }
+        }
