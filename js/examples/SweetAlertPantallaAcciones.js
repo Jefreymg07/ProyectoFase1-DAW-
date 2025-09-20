@@ -16,9 +16,25 @@ document.getElementById("btnSalir").addEventListener("click", () => {
         icon: "success",
         confirmButtonText: "Aceptar",
       }).then(() => {
-        // Aquí puedes redirigir al login si quieres
-        // Por ejemplo: window.location.href = "login.html";
+        window.location.href = "login.html";
       });
     }
   });
 });
+
+// Redirección a otras páginas
+document.getElementById("btnDeposito").onclick = function () {
+  window.location.href = "Deposito.html";
+};
+document.getElementById("btnRetiro").onclick = function () {
+  window.location.href = "Retiro.html";
+};
+document.getElementById("btnPagoServicios").onclick = function () {
+  window.location.href = "PagoServicios.html";
+};
+document.getElementById("btnHistorial").onclick = function () {
+  window.location.href = "HistorialTransacciones.html";
+};
+document.getElementById("btnAnalisisGrafico").onclick = function () {
+  window.location.href = "AnalisisGrafico.html";
+};
