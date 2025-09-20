@@ -24,17 +24,15 @@ document.getElementById("btnSalir").addEventListener("click", () => {
 
 // Redirección a otras páginas
 document.getElementById("btnDeposito").onclick = function () {
-  window.location.href = "Deposito.html";
+  window.location.href = "deposito.html";
 };
 document.getElementById("btnRetiro").onclick = function () {
-  window.location.href = "Retiro.html";
+  window.location.href = "retiro.html";
 };
 document.getElementById("btnPagoServicios").onclick = function () {
-  window.location.href = "PagoServicios.html";
+  window.location.href = "pago-servicios.html";
 };
 document.getElementById("btnHistorial").onclick = function () {
-  window.location.href = "HistorialTransacciones.html";
+  window.location.href = "consulta-saldo.html";
 };
-document.getElementById("btnAnalisisGrafico").onclick = function () {
-  window.location.href = "AnalisisGrafico.html";
-};
+
