@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokémon Bank ATM - Login</title>
-    <meta name = "description" content = "pagina Login para Pokémon Bank ATM">
-
+    <title>Pokémon Bank ATM - Cajero Automático Digital</title>
+    <meta name="description"
+        content="Sistema de cajero automático digital de Pokémon Bank - Depósitos, retiros, consultas y más">
+   <!-- SweetAlert CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+   
     <!-- Bootstrap 4.6 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
 
@@ -17,61 +21,46 @@
         rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 </head>
-
 <body>
-  
-    </div>
-     <!-- Contenido principal -->
-    <main class="login-container">
-        <!-- Contenedor principal del formulario de login -->
-    <div class="login-container">
-        <!-- Encabezado con logo y título -->
+ <div class="login-container">
         <div class="login-header">
             <div class="pokeball-modern"></div>
-            <h1 class="login-title">Pokémon Bank ATM</h1>
-            <p class="login-subtitle">Ingresa tu PIN de 4 dígitos</p>
+            <h1 class="login-title">Pokémon Bank</h1>
+            <p>Ingresa tu PIN de 4 dígitos</p>
         </div>
         
-        <!-- Formulario de login -->
-        <form>
-            <!-- Campos para el PIN de 4 dígitos -->
-            <div class="pin-container">
-                <label class="pin-label">PIN de acceso</label>
-                <div class="pin-inputs">
-                    <input type="password" class="pin-digit" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
-                    <input type="password" class="pin-digit" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
-                    <input type="password" class="pin-digit" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
-                    <input type="password" class="pin-digit" maxlength="1" pattern="[0-9]" inputmode="numeric" required>
-                </div>
-            </div>
-            
-            <!-- Teclado numérico visual (sin funcionalidad JavaScript) -->
-            <div class="numpad">
-                <button type="button" class="numpad-btn">1</button>
-                <button type="button" class="numpad-btn">2</button>
-                <button type="button" class="numpad-btn">3</button>
-                <button type="button" class="numpad-btn">4</button>
-                <button type="button" class="numpad-btn">5</button>
-                <button type="button" class="numpad-btn">6</button>
-                <button type="button" class="numpad-btn">7</button>
-                <button type="button" class="numpad-btn">8</button>
-                <button type="button" class="numpad-btn">9</button>
-                <button type="button" class="numpad-btn">0</button>
-                <button type="button" class="numpad-btn numpad-clear">Borrar</button>
-            </div>
-            
-            <!-- Botón de envío del formulario -->
-            <button type="submit" class="btn-login">Acceder</button>
-        </form>
+        <div class="pin-inputs">
+            <input type="password" class="pin-digit" maxlength="1" placeholder="•" readonly>
+            <input type="password" class="pin-digit" maxlength="1" placeholder="•" readonly>
+            <input type="password" class="pin-digit" maxlength="1" placeholder="•" readonly>
+            <input type="password" class="pin-digit" maxlength="1" placeholder="•" readonly>
+        </div>
         
-        <!-- Pie de página con enlace de ayuda -->
+        <div class="numpad">
+            <button class="numpad-btn" data-value="1">1</button>
+            <button class="numpad-btn" data-value="2">2</button>
+            <button class="numpad-btn" data-value="3">3</button>
+            <button class="numpad-btn" data-value="4">4</button>
+            <button class="numpad-btn" data-value="5">5</button>
+            <button class="numpad-btn" data-value="6">6</button>
+            <button class="numpad-btn" data-value="7">7</button>
+            <button class="numpad-btn" data-value="8">8</button>
+            <button class="numpad-btn" data-value="9">9</button>
+            <button class="numpad-btn" id="btn-clear">C</button>
+            <button class="numpad-btn" data-value="0">0</button>
+            <button class="numpad-btn" id="btn-backspace">⌫</button>
+        </div>
+        
+        <button class="btn-login" id="btn-login">Acceder</button>
+        
         <div class="login-footer">
-            <p>¿Problemas con tu PIN? <a href="#" class="help-link">Contactar soporte</a></p>
+            <a href="#">¿Olvidaste tu PIN?</a>
         </div>
-    </div>
-     <!-- Footer -->
+        <br>
+        <br>
+         <!-- Footer -->
     <footer class="main-footer">
         <div class="container">
             <div class="row align-items-center">
@@ -93,11 +82,13 @@
             </div>
         </div>
     </footer>
+    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <!-- SweetAlert JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+        <script src="js/login.js"></script>
 </body>
 
 </html>
