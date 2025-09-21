@@ -1,156 +1,325 @@
  /* =========================================
            1. CSS VARIABLES (DESIGN TOKENS)
            ========================================= */
-        :root {
-          /* Variables CSS que definen la paleta de colores y estilos del proyecto */
-          --primary: #6366f1;
-          --primary-dark: #4338ca;
-          --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          /* ... (otras variables) */
-        }
+ :root {
+   /* Variables CSS que definen la paleta de colores y estilos del proyecto */
+   --primary: #6366f1;
+   --primary-dark: #4338ca;
+   --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+   /* ... (otras variables) */
+ }
 
-        /* =========================================
+ /* =========================================
            2. RESET & BASE STYLES
            ========================================= */
-        *,
-        *::before,
-        *::after {
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-        }
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
 
-        body {
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-          background: var(--gradient-hero); /* Fondo con gradiente */
-          min-height: 100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 1rem; /* Usando variables de espacio */
-        }
+ body {
+   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+   background: var(--gradient-hero);
+   /* Fondo con gradiente */
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 1rem;
+   /* Usando variables de espacio */
+ }
 
-        /* =========================================
+ /* =========================================
            3. LOGIN STYLES
            ========================================= */
-        .login-container {
-          /* Contenedor principal con efecto de vidrio (glassmorphism) */
-          background: rgba(255, 255, 255, 0.95);
-          backdrop-filter: blur(20px);
-          border-radius: 1.5rem; /* radius-2xl */
-          box-shadow: 0 32px 64px rgba(0, 0, 0, 0.12); /* shadow-pokemon */
-          padding: 2.5rem; /* space-10 */
-          width: 100%;
-          max-width: 450px;
-        }
+ .login-container {
+   /* Contenedor principal con efecto de vidrio (glassmorphism) */
+   background: rgba(255, 255, 255, 0.95);
+   backdrop-filter: blur(20px);
+   border-radius: 1.5rem;
+   /* radius-2xl */
+   box-shadow: 0 32px 64px rgba(0, 0, 0, 0.12);
+   /* shadow-pokemon */
+   padding: 2.5rem;
+   /* space-10 */
+   width: 100%;
+   max-width: 450px;
+ }
 
-        .login-header {
-          text-align: center;
-          margin-bottom: 2rem; /* space-8 */
-        }
+ .login-header {
+   text-align: center;
+   margin-bottom: 2rem;
+   /* space-8 */
+ }
 
-        .pokeball-modern {
-          /* Estilo de pokeball decorativa */
-          width: 60px;
-          height: 60px;
-          background: linear-gradient(135deg, #ff6b6b, #feca57);
-          border-radius: 9999px; /* radius-full */
-          margin: 0 auto 1rem; /* space-4 */
-          position: relative;
-        }
+ .pokeball-modern {
+   /* Estilo de pokeball decorativa */
+   width: 60px;
+   height: 60px;
+   background: linear-gradient(135deg, #ff6b6b, #feca57);
+   border-radius: 9999px;
+   /* radius-full */
+   margin: 0 auto 1rem;
+   /* space-4 */
+   position: relative;
+ }
 
-        .login-title {
-          /* Título con gradiente de color */
-          background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          font-size: 2rem;
-          font-weight: 700; /* font-weight-bold */
-        }
+ .login-title {
+   /* Título con gradiente de color */
+   background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-size: 2rem;
+   font-weight: 700;
+   /* font-weight-bold */
+ }
 
-        /* =========================================
+ /* =========================================
            4. PIN INPUT STYLES
            ========================================= */
-        .pin-inputs {
-          /* Contenedor para los 4 dígitos del PIN */
-          display: flex;
-          justify-content: space-between;
-          margin-bottom: 1.5rem; /* space-6 */
-        }
+ .pin-inputs {
+   /* Contenedor para los 4 dígitos del PIN */
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 1.5rem;
+   /* space-6 */
+ }
 
-        .pin-digit {
-          /* Campos individuales para cada dígito del PIN */
-          width: 60px;
-          height: 70px;
-          text-align: center;
-          font-size: 2rem;
-          font-weight: 700; /* font-weight-bold */
-          border: 2px solid #cbd5e1; /* gray-300 */
-          border-radius: 0.75rem; /* radius-lg */
-          background: rgba(255, 255, 255, 0.9);
-        }
+ .pin-digit {
+   /* Campos individuales para cada dígito del PIN */
+   width: 60px;
+   height: 70px;
+   text-align: center;
+   font-size: 2rem;
+   font-weight: 700;
+   /* font-weight-bold */
+   border: 2px solid #cbd5e1;
+   /* gray-300 */
+   border-radius: 0.75rem;
+   /* radius-lg */
+   background: rgba(255, 255, 255, 0.9);
+ }
 
-        /* =========================================
+ /* =========================================
            5. NUMPAD STYLES
            ========================================= */
-        .numpad {
-          /* Teclado numérico con grid layout */
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 0.75rem; /* space-3 */
-          margin-bottom: 1.5rem; /* space-6 */
-        }
+ .numpad {
+   /* Teclado numérico con grid layout */
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 0.75rem;
+   /* space-3 */
+   margin-bottom: 1.5rem;
+   /* space-6 */
+ }
 
-        .numpad-btn {
-          /* Botones del teclado numérico */
-          padding: 1rem; /* space-4 */
-          background: rgba(255, 255, 255, 0.9);
-          border: 2px solid #e2e8f0; /* gray-200 */
-          border-radius: 0.75rem; /* radius-lg */
-          font-size: 1.5rem;
-          font-weight: 700; /* font-weight-bold */
-          height: 60px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
+ .numpad-btn {
+   /* Botones del teclado numérico */
+   padding: 1rem;
+   /* space-4 */
+   background: rgba(255, 255, 255, 0.9);
+   border: 2px solid #e2e8f0;
+   /* gray-200 */
+   border-radius: 0.75rem;
+   /* radius-lg */
+   font-size: 1.5rem;
+   font-weight: 700;
+   /* font-weight-bold */
+   height: 60px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
 
-        /* =========================================
+ /* =========================================
            6. BUTTON & FOOTER STYLES
            ========================================= */
-        .btn-login {
-          /* Botón de acceso con gradiente */
-          background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-          color: white;
-          width: 100%;
-          padding: 1rem; /* space-4 */
-          border: none;
-          border-radius: 0.75rem; /* radius-lg */
-          font-size: 1.1rem;
-          font-weight: 600; /* font-weight-semibold */
-        }
+ .btn-login {
+   /* Botón de acceso con gradiente */
+   background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+   color: white;
+   width: 100%;
+   padding: 1rem;
+   /* space-4 */
+   border: none;
+   border-radius: 0.75rem;
+   /* radius-lg */
+   font-size: 1.1rem;
+   font-weight: 600;
+   /* font-weight-semibold */
+ }
 
-        .login-footer {
-          /* Pie de página con enlace de ayuda */
-          text-align: center;
-          margin-top: 2rem; /* space-8 */
-          padding-top: 1.5rem; /* space-6 */
-          border-top: 1px solid #e2e8f0; /* gray-200 */
-          color: #64748b; /* gray-500 */
-        }
+ .login-footer {
+   /* Pie de página con enlace de ayuda */
+   text-align: center;
+   margin-top: 2rem;
+   /* space-8 */
+   padding-top: 1.5rem;
+   /* space-6 */
+   border-top: 1px solid #e2e8f0;
+   /* gray-200 */
+   color: #64748b;
+   /* gray-500 */
+ }
 
-        /* =========================================
+ /* =========================================
            7. RESPONSIVE DESIGN
            ========================================= */
-        @media (max-width: 576px) {
-          /* Ajustes para dispositivos móviles */
-          .login-container {
-            padding: 1.5rem; /* space-6 */
-          }
+ @media (max-width: 576px) {
 
-          .pin-digit {
-            width: 50px;
-            height: 60px;
-            font-size: 1.75rem;
-          }
-        }
+   /* Ajustes para dispositivos móviles */
+   .login-container {
+     padding: 1.5rem;
+     /* space-6 */
+   }
+
+   .pin-digit {
+     width: 50px;
+     height: 60px;
+     font-size: 1.75rem;
+   }
+ }
+
+ /* =========================================
+   HISTORIAL STYLES 
+   ========================================= */
+
+ /* Contenedor principal del historial */
+ .history-container {
+   background: rgba(255, 255, 255, 0.95);
+   backdrop-filter: blur(20px);
+   border-radius: 1.5rem;
+   box-shadow: 0 32px 64px rgba(0, 0, 0, 0.12);
+   padding: 2rem;
+   margin: 1rem auto;
+   max-width: 1200px;
+ }
+
+ /* Filtros de busqueda */
+ .filters-section {
+   background: rgba(255, 255, 255, 0.8);
+   padding: 1.5rem;
+   border-radius: 1rem;
+   margin-bottom: 2rem;
+   border: 1px solid rgba(255, 255, 255, 0.3);
+ }
+
+ /* Tarjetas de estadisticas */
+ .stats-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   gap: 1rem;
+   margin-bottom: 2rem;
+ }
+
+ .stat-card {
+   background: rgba(255, 255, 255, 0.9);
+   padding: 1.5rem;
+   border-radius: 1rem;
+   text-align: center;
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+ }
+
+ .stat-value {
+   font-size: 2rem;
+   font-weight: 700;
+   color: var(--primary);
+ }
+
+ /* Lista de transacciones */
+ .transaction-item {
+   background: rgba(255, 255, 255, 0.9);
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   border-radius: 0.75rem;
+   padding: 1.5rem;
+   margin: 1rem 0;
+   transition: all 0.3s ease;
+ }
+
+ .transaction-item:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+ }
+
+ /* Tipos de transaccion */
+ .transaction-type {
+   padding: 0.5rem 1rem;
+   border-radius: 1rem;
+   font-size: 0.85rem;
+   font-weight: 600;
+   display: inline-block;
+ }
+
+ .type-deposit {
+   background: #10b981;
+   color: white;
+ }
+
+ .type-withdrawal {
+   background: #ef4444;
+   color: white;
+ }
+
+ .type-payment {
+   background: #f59e0b;
+   color: white;
+ }
+
+ .type-inquiry {
+   background: #06b6d4;
+   color: white;
+ }
+
+ /* Montos */
+ .amount-positive {
+   color: #10b981;
+   font-weight: 700;
+ }
+
+ .amount-negative {
+   color: #ef4444;
+   font-weight: 700;
+ }
+
+ /* Paginacion */
+ .pagination-container {
+   display: flex;
+   justify-content: center;
+   margin-top: 2rem;
+ }
+
+ .pagination-btn {
+   padding: 0.5rem 1rem;
+   margin: 0 0.25rem;
+   background: rgba(255, 255, 255, 0.9);
+   border: 1px solid #e2e8f0;
+   border-radius: 0.5rem;
+   cursor: pointer;
+   transition: all 0.3s ease;
+ }
+
+ .pagination-btn:hover,
+ .pagination-btn.active {
+   background: var(--primary);
+   color: white;
+ }
+
+ /* Responsive para historial */
+ @media (max-width: 768px) {
+   .history-container {
+     padding: 1rem;
+     margin: 0.5rem;
+   }
+
+   .stats-grid {
+     grid-template-columns: repeat(2, 1fr);
+   }
+
+   .transaction-item {
+     padding: 1rem;
+   }
+ }
