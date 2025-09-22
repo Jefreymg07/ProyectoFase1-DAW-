@@ -55,7 +55,7 @@
             timer: 4000,
             timerProgressBar: true
         }).then(() => {
-               window.location.href = "index.html"; // Redirigir a la página del banco
+               window.location.href = "dashboard.html"; // Redirigir al dashboard
         });
             } else {
                          // Usar SweetAlert para error
