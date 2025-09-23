@@ -26,6 +26,9 @@ document.getElementById("btnSalir").addEventListener("click", () => {
 document.getElementById("btnDeposito").onclick = function () {
   window.location.href = "deposito.html";
 };
+document.getElementById("btnConsultarSaldo").onclick = function () {
+  window.location.href = "consultaDeSaldo.html";
+};
 document.getElementById("btnRetiro").onclick = function () {
   window.location.href = "retiro.html";
 };
@@ -33,6 +36,8 @@ document.getElementById("btnPagoServicios").onclick = function () {
   window.location.href = "pago-servicios.html";
 };
 document.getElementById("btnHistorial").onclick = function () {
-  window.location.href = "consulta-saldo.html";
+  window.location.href = "historialTransacciones.html";
 };
-
+document.getElementById("btnAnalisisGrafico").onclick = function () {
+  window.location.href = "analisisGrafico.html";
+};
